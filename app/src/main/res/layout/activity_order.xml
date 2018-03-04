@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background"
+        android:fadingEdge="vertical"
+        android:scaleType="centerCrop"
+        android:src="@drawable/appback" />
+
+    <TextView
+        android:id="@+id/qtyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/border"
+        android:fontFamily="serif"
+        android:padding="@dimen/padding"
+        android:text="@string/quantityText"
+        android:textColor="@color/button"
+        android:textSize="@dimen/orderText" />
+
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qtyText"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/border"
+        android:fontFamily="serif"
+        android:onClick="dec"
+        android:padding="@dimen/padding"
+        android:text="@string/minus"
+        android:textColor="@color/button"
+        android:textSize="@dimen/ButtonText" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qtyText"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_toEndOf="@id/btnAdd"
+        android:background="@drawable/border"
+        android:fontFamily="serif"
+        android:padding="@dimen/padding"
+        android:text="@string/quantity"
+        android:textColor="@color/button"
+        android:textSize="@dimen/ButtonText" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qtyText"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_toEndOf="@id/qty"
+        android:background="@drawable/border"
+        android:fontFamily="serif"
+        android:onClick="inc"
+        android:padding="@dimen/padding"
+        android:text="@string/plus"
+        android:textColor="@color/button"
+        android:textSize="@dimen/ButtonText" />
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAdd"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/border"
+        android:fontFamily="serif"
+        android:padding="@dimen/padding"
+        android:text="@string/priceText"
+        android:textColor="@color/button"
+        android:textSize="@dimen/orderText" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/priceText"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/border"
+        android:fontFamily="serif"
+        android:padding="@dimen/padding"
+        android:text="@string/price"
+        android:textColor="@color/button"
+        android:textSize="@dimen/ButtonText" />
+
+    <Button
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price"
+        android:layout_marginStart="@dimen/marginLeft"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/border"
+        android:fontFamily="serif"
+        android:onClick="submitOrder"
+        android:padding="@dimen/padding"
+        android:text="@string/orderText"
+        android:textColor="@color/button"
+        android:textSize="@dimen/buttonText" />
+
+
+</RelativeLayout>

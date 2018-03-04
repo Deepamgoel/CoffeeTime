@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">CoffeeTime</string>
+    <string name="second">Order</string>
+
+    <string name="coffeeText">coffeeText</string>
+    <string name="coffeeCup">coffeeCup</string>
+    <string name="buttonText">SHOP</string>
+
+    <string name="quantityText">Quantity</string>
+    <string name="quantity">0</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+
+    <string name="priceText">Price</string>
+    <string name="price">0</string>
+
+    <string name="orderText">Order</string>
+    <string name="background">background</string>
+
+</resources>
