@@ -11,7 +11,7 @@
         android:layout_height="@dimen/bannerTextHeight"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/marginText"
+        android:layout_margin="@dimen/margin"
         android:contentDescription="@string/coffeeText"
         android:src="@drawable/text" />
 
@@ -21,7 +21,7 @@
         android:layout_height="@dimen/bannerCupHeight"
         android:layout_below="@id/text"
         android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/marginCup"
+        android:layout_margin="@dimen/margin"
         android:contentDescription="@string/coffeeCup"
         android:src="@drawable/cup" />
 
@@ -31,13 +31,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/margin"
-        android:background="@drawable/border"
-        android:fontFamily="serif"
+        android:layout_marginBottom="100dp"
+        android:background="@color/transGray"
         android:onClick="order"
-        android:padding="@dimen/padding"
         android:text="@string/buttonText"
-        android:textColor="@color/button"
-        android:textSize="@dimen/buttonSize" />
+        android:textSize="@dimen/buttonSize"
+        android:textStyle="bold" />
 
 </RelativeLayout>

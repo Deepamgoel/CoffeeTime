@@ -2,63 +2,70 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/banner">
 
 
     <TextView
         android:id="@+id/qtyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin"
         android:fontFamily="cursive"
         android:text="@string/quantityText"
-        android:textColor="#000000"
-        android:textSize="56sp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textLarge"
         android:textStyle="bold" />
 
-
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="45dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/qtyText"
-        android:layout_margin="8dp"
-        android:onClick="dec"
-        android:text="@string/minus" />
-
-    <TextView
-        android:id="@+id/qty"
+    <LinearLayout
+        android:id="@+id/abc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/qtyText"
-        android:layout_margin="8dp"
-        android:layout_toEndOf="@id/btnAdd"
-        android:fontFamily="cursive"
-        android:text="@string/quantity"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold" />
+        android:layout_margin="@dimen/margin"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnSub"
-        android:layout_width="45dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/qtyText"
-        android:layout_margin="8dp"
-        android:layout_toEndOf="@id/qty"
-        android:onClick="inc"
-        android:text="@string/plus" />
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/border"
+            android:onClick="dec"
+            android:text="@string/minus"
+            android:textSize="@dimen/buttonSize" />
+
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:fontFamily="cursive"
+            android:text="@string/quantity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSmall" />
+
+        <Button
+            android:id="@+id/btnSub"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/border"
+            android:onClick="inc"
+            android:text="@string/plus"
+            android:textSize="@dimen/buttonSize" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/priceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnAdd"
-        android:layout_margin="8dp"
+        android:layout_below="@id/abc"
+        android:layout_margin="@dimen/margin"
         android:fontFamily="cursive"
         android:text="@string/priceText"
-        android:textColor="#000000"
-        android:textSize="56sp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textLarge"
         android:textStyle="bold" />
 
     <TextView
@@ -66,21 +73,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/priceText"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin"
         android:fontFamily="cursive"
         android:text="@string/price"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold" />
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSmall" />
 
     <Button
         android:id="@+id/order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/price"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/border"
         android:onClick="submitOrder"
-        android:text="@string/orderText" />
+        android:text="@string/orderText"
+        android:textSize="@dimen/buttonSize" />
 
 
 </RelativeLayout>

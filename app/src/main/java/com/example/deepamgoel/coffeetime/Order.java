@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
+import java.util.Locale;
 
 
 public class Order extends AppCompatActivity {
@@ -28,6 +29,8 @@ public class Order extends AppCompatActivity {
     }
 
     public void dec(View View) {
+        if (noOfCoffees == 0)
+            noOfCoffees++;
         display(--noOfCoffees);
     }
 
@@ -36,7 +39,7 @@ public class Order extends AppCompatActivity {
      */
     private void display(int number) {
         TextView quantityTextView = findViewById(R.id.qty);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(String.format(Locale.getDefault(), "%d", number));
     }
 
     /**
