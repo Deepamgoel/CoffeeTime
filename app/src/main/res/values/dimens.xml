@@ -10,18 +10,9 @@
 
 
     <dimen name="margin">15dp</dimen>
-    <dimen name="padding">10dp</dimen>
-
-    <dimen name="marginTop">16dp</dimen>
-    <dimen name="marginBottom">16dp</dimen>
-    <dimen name="marginLeft">16dp</dimen>
-    <dimen name="marginRight">16dp</dimen>
+    <dimen name="padding">5dp</dimen>
 
 
     <dimen name="buttonSize">50sp</dimen>
-    <dimen name="buttonWidth">58dp</dimen>
-    <dimen name="ButtonText">16sp</dimen>
-    <dimen name="buttonText">32sp</dimen>
-
 
 </resources>
