@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="bannerTextHeight">150dp</dimen>
-    <dimen name="bannerCupHeight">130dp</dimen>
+    <dimen name="bannerCupHeight">150dp</dimen>
     <dimen name="margin">8dp</dimen>
-    <dimen name="textLarge">56sp</dimen>
-    <dimen name="textMedium">45sp</dimen>
-    <dimen name="textSmall">34sp</dimen>
-    <dimen name="buttonSize">24sp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="buttonWidth">45dp</dimen>
+    <dimen name="varWidth">80dp</dimen>
+
+    <dimen name="textLarge">45sp</dimen>
+    <dimen name="textMedium">34sp</dimen>
+    <dimen name="textSmall">24sp</dimen>
 
 </resources>
