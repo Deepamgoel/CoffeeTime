@@ -2,40 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/banner"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/text"
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/bannerTextHeight"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/margin"
-        android:contentDescription="@string/coffeeText"
-        android:src="@drawable/text" />
-
-    <ImageView
-        android:id="@+id/cup"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bannerCupHeight"
-        android:layout_below="@id/text"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/margin"
-        android:contentDescription="@string/coffeeCup"
-        android:src="@drawable/cup" />
-
-    <Button
-        android:id="@+id/Button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:background="@color/transGray"
-        android:onClick="order"
-        android:text="@string/buttonText"
-        android:textSize="@dimen/buttonSize"
-        android:textStyle="bold" />
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/coffeeText"
+        android:scaleType="fitXY"
+        android:src="@drawable/giphy1" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/bannerCupHeight"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/coffee"
+        android:src="@drawable/goodidea" />
+
 
 </RelativeLayout>

@@ -2,8 +2,8 @@ package com.example.deepamgoel.coffeetime;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -13,14 +13,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Handler delay = new Handler();
+        delay.postDelayed(new Runnable() {
+
+
+            @Override
+            public void run() {
+                delay();
+                finish();
+            }
+
+        }, 10000);
 
     }
 
-
-    public void order(View view) {
-        Intent openOtherActivity = new Intent(this, Order.class);
+    public void delay() {
+        final Intent openOtherActivity = new Intent(this, Order.class);
         startActivity(openOtherActivity);
     }
-
-
 }

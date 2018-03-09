@@ -1,94 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/banner">
+    android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/qtyText"
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin"
-        android:fontFamily="cursive"
-        android:text="@string/quantityText"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textLarge"
-        android:textStyle="bold" />
+        android:alpha="0.6"
+        android:scaleType="fitXY"
+        android:src="@drawable/giphy" />
 
-    <LinearLayout
-        android:id="@+id/abc"
+
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/qtyText"
-        android:layout_margin="@dimen/margin"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="45dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin"
-            android:background="@drawable/border"
-            android:onClick="dec"
-            android:text="@string/minus"
-            android:textSize="@dimen/buttonSize" />
 
-        <TextView
-            android:id="@+id/qty"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin"
-            android:fontFamily="cursive"
-            android:text="@string/quantity"
-            android:textColor="@color/black"
-            android:textSize="@dimen/textSmall" />
+            tools:targetApi="O">
 
-        <Button
-            android:id="@+id/btnSub"
-            android:layout_width="45dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/margin"
-            android:background="@drawable/border"
-            android:onClick="inc"
-            android:text="@string/plus"
-            android:textSize="@dimen/buttonSize" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:focusedByDefault="false"
+                android:hint="@string/name"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="@dimen/padding"
+                android:textSize="@dimen/textSmall" />
 
-    <TextView
-        android:id="@+id/priceText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/abc"
-        android:layout_margin="@dimen/margin"
-        android:fontFamily="cursive"
-        android:text="@string/priceText"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textLarge"
-        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/priceText"
-        android:layout_margin="@dimen/margin"
-        android:fontFamily="cursive"
-        android:text="@string/price"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textSmall" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/qtyText"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:layout_marginVertical="@dimen/padding"
+                android:background="@color/black" />
 
-    <Button
-        android:id="@+id/order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/price"
-        android:layout_margin="@dimen/margin"
-        android:background="@drawable/border"
-        android:onClick="submitOrder"
-        android:text="@string/orderText"
-        android:textSize="@dimen/buttonSize" />
+
+            <TextView
+                android:id="@+id/qtyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="@string/quantityText"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textLarge"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/qty_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qtyText"
+                android:layout_margin="@dimen/margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding">
+
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:onClick="dec"
+                    android:text="@string/minus"
+                    android:textSize="@dimen/textSmall" />
+
+
+                <TextView
+                    android:id="@+id/qty"
+                    android:layout_width="@dimen/varWidth"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:gravity="center"
+                    android:text="@string/quantity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSmall" />
+
+
+                <Button
+                    android:layout_width="@dimen/buttonWidth"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:onClick="inc"
+                    android:text="@string/plus"
+                    android:textSize="@dimen/textSmall" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/toppings"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:layout_marginVertical="@dimen/padding"
+                android:background="@color/black" />
+
+
+            <TextView
+                android:id="@+id/toppings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qty_selector"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="@string/toppings"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textLarge"
+                android:textStyle="bold" />
+
+
+            <CheckBox
+                android:id="@+id/whipped_cream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toppings"
+                android:layout_margin="@dimen/margin"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:onClick="whipped"
+                android:paddingBottom="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:paddingStart="@dimen/padding"
+                android:text="@string/whip_cream"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textMedium" />
+
+
+            <CheckBox
+                android:id="@+id/chocolate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whipped_cream"
+                android:layout_margin="@dimen/margin"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:onClick="chocolate"
+                android:paddingBottom="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:paddingStart="@dimen/padding"
+                android:text="@string/chocolate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textMedium" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/priceText"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:layout_marginVertical="@dimen/padding"
+                android:background="@color/black" />
+
+
+            <TextView
+                android:id="@+id/priceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chocolate"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="@string/priceText"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textLarge"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceText"
+                android:layout_marginHorizontal="@dimen/margin"
+                android:fontFamily="cursive"
+                android:padding="@dimen/padding"
+                android:text="@string/price"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSmall" />
+
+
+            <Button
+                android:id="@+id/order_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price"
+                android:layout_margin="@dimen/margin"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:onClick="submitOrder"
+                android:padding="@dimen/padding"
+                android:text="@string/summary"
+                android:textSize="@dimen/textSmall" />
+
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price"
+                android:layout_margin="@dimen/margin"
+                android:background="@drawable/border"
+                android:onClick="confirm"
+                android:padding="@dimen/padding"
+                android:text="@string/confirm"
+                android:textSize="@dimen/textSmall"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/yess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/black"
+        android:src="@drawable/yess"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>
